@@ -1,8 +1,0 @@
-#include <stdio.h>
-int main(void) 
-{
-	puts("안녕하세요");
-	puts("종료하려면 아무키나 눌러");
-	puts("출력 test ");
-	return 0;
-}
