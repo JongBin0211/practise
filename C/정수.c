@@ -4,7 +4,7 @@
 void get_integers(int list[]) {
 	printf("8개의 정수를 입력하시오: ");
 	for (int i = 0; i < SIZE; ++i) {
-		scanf_s("%d", &list[i]);
+		scanf("%d", &list[i]);
 	}
 }
 int cal_sum(int list[])
