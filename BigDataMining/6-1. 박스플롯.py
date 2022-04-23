@@ -17,4 +17,5 @@ fish_b = fish_multi.query("species == 'B'")
 print(fish_b)
 
 sns.boxplot(data = fish_a)
+pit.savefig("fish_a")
 plt.show()
