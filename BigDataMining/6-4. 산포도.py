@@ -27,4 +27,5 @@ corre = sp.corrcoef(x, y, ddof = 1)
 print(corre)
 #두개의 상관관계를 가지고 그림그리기
 sns.jointplot(x =  "x", y = "y", data = cov_data, color = "black")
+plt.savefig("joinplot")
 plt.show()
