@@ -39,26 +39,26 @@ void DrawDino(int dinoY)
 {
 	GotoXY(0, dinoY);
 	static bool legFlag = true;
-	printf("        aaaaaaa \n");
-	printf("       aa aaaaaa\n");
-	printf("       aaaaaaaaa\n");
-	printf("a      aaa      \n");
-	printf("aa     aaaaaaa  \n");
-	printf("aaa   aaaaa     \n");
-	printf(" aa  aaaaaaaaaa \n");
-	printf(" aaaaaaaaaaa    \n");
-	printf("  aaaaaaaaaa    \n");
-	printf("    aaaaaaaa    \n");
-	printf("     aaaaaa     \n");
+	puts("        aaaaaaa ");
+	puts("       aa aaaaaa");
+	puts("       aaaaaaaaa");
+	puts("a      aaa      ");
+	puts("aa     aaaaaaa  ");
+	puts("aaa   aaaaa     ");
+	puts(" aa  aaaaaaaaaa ");
+	puts(" aaaaaaaaaaa    ");
+	puts("  aaaaaaaaaa    ");
+	puts("    aaaaaaaa    ");
+	puts("     aaaaaa     ");
 	if (legFlag)
 	{
-		printf("     a    aaa    \n");
+		puts("     a    aaa    ");
 		printf("     aa          ");
 		legFlag = false;
 	}
 	else
 	{
-		printf("     aaa  a     \n");
+		puts("     aaa  a     ");
 		printf("          aa    ");
 		legFlag = true;
 	}
