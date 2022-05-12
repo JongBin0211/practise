@@ -47,7 +47,7 @@ int main()
 			b = a[0] + a[2]; // 승 + 패 (무승부는 승률에 영향을 주지 않음)
 			winRate = (double)a[0] / (double)b; // 승 나누기 승 + 패
 			winRate *= 100; // 곱하기 100
-			printf("%d전 %d승 %d무 %d패 승률 %.2lf%%\n\n", cnt, a[0], a[1], a[2], winRate);
+			printf("%d전 %d승 %d무 %d패 승률 %.2lf%%\n\n", cnt, a[0], a[1], a[2], winRate); //승률은 소수점 두번째 
 		}
 		else // 사용자가 입력한 값이 1, 2, 3이 아닌 경우 
 		{
