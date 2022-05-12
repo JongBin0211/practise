@@ -6,13 +6,14 @@ int main()
 {
 	int com; // 컴퓨터가 낸 값을 저장 
 	int user; // 사용자가 낸 값을 저장 
-	int result[3] = { 0, }; // 게임의 결과를 저장 
+	int a[3] = { 0, }; // 게임의 결과를 저장 0은 종료, 1은 승리, 2는 무승부, 3은 패배
+	int b; // 승률 계산
 	double winRate = 0; //승률
 
-	// result 배열의 모든 요소를 0으로 초기화 
+	// a 배열의 모든 요소를 0으로 초기화 
 
 	int cnt = 0; // 게임의 횟수를 저장 하고 0으로 초기화
-	srand((unsigned)time(NULL)); // rand 함수의 결과가 매번 다르도록 시드값을 지정합니다. 
+	srand((unsigned)time(NULL)); // rand 함수의 결과가 매번 다르도록 시드값을 지정 
 	while (1) // 사용자가 종료할 때 까지 반복 
 	{
 		com = rand() % 3 + 1; // 1~3 값 중 하나를 저장 
@@ -29,24 +30,24 @@ int main()
 			if (com == user) // 컴퓨터의 값과 사용자의 값이 같으면 비기는 경우 
 			{
 				printf("무승부 \n\n");
-				result[1]++; // 무승부 횟수를 증가 
+				a[1]++; // 무승부 횟수를 증가 
 			}// 지는 경우 
 			else if (((com == 1) && (user == 3)) ||
 				((com == 2) && (user == 1)) ||
 				((com == 3) && (user == 2)))
 			{
 				printf("패배\n\n");
-				result[2]++; // 패배 횟수를 증가 
+				a[2]++; // 패배 횟수를 증가 
 			}
 			else // 나머지는 이긴 경우 
 			{
 				printf("승리\n\n");
-				result[0]++; // 승리 횟수를 증가 
+				a[0]++; // 승리 횟수를 증가 
 			}
-			cnt = result[0] + result[1] + result[2]; // 승 + 무 + 패
-			winRate = (double)result[0] / (double)cnt; // 승 나누기 승 + 무 + 패
+			b = a[0] + a[2]; // 승 + 패 (무승부는 승률에 영향을 주지 않음)
+			winRate = (double)a[0] / (double)b; // 승 나누기 승 + 패
 			winRate *= 100; // 곱하기 100
-			printf("%d전 %d승 %d무 %d패 승률 %.2lf%%\n\n", cnt, result[0], result[1], result[2], winRate);
+			printf("%d전 %d승 %d무 %d패 승률 %.2lf%%\n\n", cnt, a[0], a[1], a[2], winRate);
 		}
 		else // 사용자가 입력한 값이 1, 2, 3이 아닌 경우 
 		{
@@ -62,4 +63,3 @@ int main()
 	}
 	return 0;
 }
-
