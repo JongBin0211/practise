@@ -137,7 +137,7 @@ int main()
 			if (isCollision(treeX, dinoY))
 				break;
 
-			//z키가 눌렸고, 바닥이 아닐때 점프
+			//F키가 눌렸고, 바닥이 아닐때 점프
 			if (GetKeyDown() == 'f' && isBottom)
 			{
 				isJumping = true;
